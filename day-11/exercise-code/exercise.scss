@@ -1,0 +1,77 @@
+/* Day 11 Exercise
+ *
+ * This is an .scss file.
+ *
+ * Your assignment is to write the corresponding CSS file that's generated -- without
+ * compiling the Sass code.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+// Vars
+$default: #ccc;
+$error: #FFCCCC;
+$info: #D1EEFC;
+$warning: #FAEFD0;
+$success: #F6FDCE;
+$default-border: #C4C4C4;
+$error-border: #E2A5A5;
+$info-border: #ADD6EB;
+$warning-border: #E2D2A6;
+$success-border: #DCE5A4;
+
+.alert {
+    display: block;
+    background: $default;
+    border: 1px solid $default-border;
+    padding: 1em;
+}
+
+.alert-error {
+    @extend .alert;
+
+    background: $error;
+    border-color: $error-border;
+}
+
+.alert-info {
+    @extend .alert;
+
+    background: $info;
+    border-color: $info-border;
+}
+
+.alert-warning {
+    @extend .alert;
+
+    background: $warning;
+    border-color: $warning-border;
+}
+
+.alert-success {
+    @extend .alert;
+
+    background: $success;
+    border-color: $success-border;
+}
+
+.large-alert {
+    @extend .alert;
+
+    font-size: 120%;
+    padding: 2em;
+}
+
+.floated-alert {
+    position: relative;
+    z-index: 999999;
+    top: 10%;
+    left: 0;
+    right: 0;
+}
+
+.emergency-alert {
+    @extend .large-alert;
+    @extend .alert-error;
+    @extend .floated-alert;
+}

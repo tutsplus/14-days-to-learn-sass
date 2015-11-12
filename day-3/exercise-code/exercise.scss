@@ -1,0 +1,60 @@
+/* Day 3 Exercise
+ *
+ * This is an SCSS file.
+ *
+ * Your assignment is to use nested properties wherever you see fit.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 1.45;
+}
+
+p {
+    margin-bottom: 1.5em;
+
+    a {
+        text-decoration: none;
+        color: #CD746A;
+
+        &:hover {
+            color: #fff;
+            background-color: #333;
+        }
+    }
+}
+
+blockquote {
+    font-family: serif;
+    font-size: 150%;
+    font-style: italic;
+
+    cite {
+        a {
+            color: #333;
+
+            &:hover {
+                text-decoration: underline;
+                color: #CD746A;
+                text-transform: uppercase;
+            }
+        }
+
+        &:before {
+            content: "- ";
+        }
+    }
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+
+    .fluid-layout & {
+        width: 85%;
+    }
+}

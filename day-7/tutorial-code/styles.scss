@@ -1,0 +1,44 @@
+/* Day 7 - Operations */
+
+// Number operations
+body {
+    margin: 10px + 20px;
+    padding: 20px * 2;
+    font-size: 39px - 10px;
+}
+
+.container {
+    font: 20px/1.5;
+
+    $baseline: 2em;
+
+    margin-bottom: $baseline / 2;
+    margin-top: (2em / 2);
+
+    padding: 10px + 20px / 2;
+
+    &:after {
+        content: 10px > 20px;
+    }
+
+    margin-right: 1px + 3px * 3;
+    margin-left: (1px + 3px) * 3;
+}
+
+
+
+// String operations
+.button {
+    font-family: sans + "-serif";
+    font-family: "sans" + -serif;
+
+    &:before {
+        content: "Click" + "Me";
+    }
+
+    &:after {
+        $content: "default";
+
+        content: "This is a #{$content} button with a width of #{5 * 23}px.";
+    }
+}

@@ -1,0 +1,50 @@
+/* Day 11 Exercise Answer */
+
+.alert,
+.alert-error,
+.emergency-alert,
+.alert-info,
+.alert-warning,
+.alert-success,
+.large-alert {
+    display: block;
+    background: #ccc;
+    border: 1px solid #C4C4C4;
+    padding: 1em;
+}
+
+.alert-error,
+.emergency-alert {
+    background: #FFCCCC;
+    border-color: #E2A5A5;
+}
+
+.alert-info {
+    background: #D1EEFC;
+    border-color: #ADD6EB;
+}
+
+.alert-warning {
+    background: #FAEFD0;
+    border-color: #E2D2A6;
+}
+
+.alert-success {
+    background: #F6FDCE;
+    border-color: #DCE5A4;
+}
+
+.large-alert,
+.emergency-alert {
+    font-size: 120%;
+    padding: 2em;
+}
+
+.floated-alert,
+.emergency-alert {
+    position: relative;
+    z-index: 999999;
+    top: 10%;
+    left: 0;
+    right: 0;
+}

@@ -1,0 +1,13 @@
+/* Hey, this is a dummy CSS file. */
+
+.row { clear: both; }
+
+.col-left {
+    float: left;
+    width: 60%;
+}
+
+.col-right {
+    float: right;
+    width: 40%;
+}

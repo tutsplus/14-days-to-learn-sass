@@ -1,0 +1,49 @@
+/* Day 9 Exercise
+ *
+ * This is an .scss file.
+ *
+ * Your assignment is to answer the questions below and typing your answer in the
+ * designated commented area.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+/*** QUESTION 1 ***/
+/*** The following two imports have the same result. True or false? ***/
+@import "reset";
+@import "_reset.scss";
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 2 ***/
+/*** The following import is correct. True or false? ***/
+@import "_typography.sass";
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 3 ***/
+/*** Is the following @import correct? Answer with Yes or No. ***/
+@import url("_typography.scss");
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 4 ***/
+/*** This statement will import two partial files. True of false? ***/
+@import "variables", "utilities/settings";
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 5 ***/
+/*** This statement is correct. True or false? ***/
+@import "_reset.scss";
+@import "reset.scss";
+
+/*** Type your answer here ***/

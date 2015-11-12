@@ -1,0 +1,23 @@
+/* Day 7 - Operations */
+body {
+  margin: 30px;
+  padding: 40px;
+  font-size: 29px; }
+
+.container {
+  font: 20px/1.5;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  padding: 20px;
+  margin-right: 10px;
+  margin-left: 12px; }
+  .container:after {
+    content: false; }
+
+.button {
+  font-family: sans-serif;
+  font-family: "sans-serif"; }
+  .button:before {
+    content: "ClickMe"; }
+  .button:after {
+    content: "This is a default button with a width of 115px."; }

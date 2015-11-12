@@ -1,0 +1,41 @@
+/* Day 9 Exercise Answer */
+
+/*** QUESTION 1 ***/
+/*** The following two imports have the same result. True or false? ***/
+@import "reset";
+@import "_reset.scss";
+
+/*** True ***/
+
+
+
+/*** QUESTION 2 ***/
+/*** The following import is correct. True or false? ***/
+@import "_typography.sass";
+
+/*** True ***/
+
+
+
+/*** QUESTION 3 ***/
+/*** Is the following @import correct? Answer with Yes or No. ***/
+@import url("_typography.scss");
+
+/*** No ***/
+
+
+
+/*** QUESTION 4 ***/
+/*** This statement will import two partial files. True of false? ***/
+@import "variables", "utilities/settings";
+
+/*** True ***/
+
+
+
+/*** QUESTION 5 ***/
+/*** This statement is correct. True or false? ***/
+@import "_reset.scss";
+@import "reset.scss";
+
+/*** False ***/

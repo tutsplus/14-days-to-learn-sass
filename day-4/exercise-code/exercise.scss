@@ -1,0 +1,62 @@
+/* Day 4 Exercise
+ *
+ * This is an SCSS file.
+ *
+ * Your assignment is to use variables wherever you see fit to make this code
+ * easier to maintain.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+p {
+    margin-bottom: 1.5em;
+
+    a {
+        text-decoration: none;
+        color: #CD746A;
+
+        &:hover {
+            color: #fff;
+            background-color: #333;
+        }
+    }
+}
+
+blockquote {
+    font-family: serif;
+    font-size: 150%;
+    font-style: italic;
+    padding: 3em 1.5em;
+    margin: 3em;
+
+    cite {
+        a {
+            color: #333;
+
+            &:hover {
+                color: #CD746A;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+        }
+
+        &:before {
+            content: "- ";
+        }
+    }
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+
+    .fluid-layout & {
+        width: 85%;
+    }
+}

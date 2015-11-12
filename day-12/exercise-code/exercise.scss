@@ -1,0 +1,42 @@
+/* Day 12 Exercise
+ *
+ * This is an .scss file.
+ *
+ * Your assignment is to display a color palette that can have two themes: light and dark.
+ * Each of the two themes has four colors represented by their hex codes:
+ *
+ * light: #cccccc, #eaeaea, #f1f4f7, #fffaf7
+ * dark: #2b2b2b, #f5f5f5, #e5e5e5, #ddb34e
+ *
+ * The palette should be represented by 4 elements inside the .palette container (use the code below).
+ * These 4 elements should be absolutely positioned and displayed in a single line, at 1em distance
+ * from one another.
+ *
+ * You should use the least amount of Sass code possible.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	font-size: 20px;
+}
+
+.palette {
+    position: relative;
+    width: 17em;
+    height: 5em;
+    border: 1px solid #333;
+}
+
+.palette-item {
+    width: 3em;
+    height: 3em;
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}

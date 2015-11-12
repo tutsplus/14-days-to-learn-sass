@@ -1,0 +1,33 @@
+/* Day 7 Exercise
+ *
+ * This is a CSS file.
+ *
+ * Your assignment is to write the corresponding .scss file while respecting a few rules:
+ *
+ * 1. You're not allowed to use any number or string inside the property value. You can
+ * only use the value of 100%, the function map-get(); and any kind of operations you might see fit.
+ * 2. All the values are to be retrieved from a map.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+body {
+    font: 1em/1.5 Helvetica, Arial, sans-serif;
+    color: #999;
+}
+
+.large-text {
+    font-size: 200%;
+}
+
+.small-text {
+    font-size: 75%;
+}
+
+blockquote {
+    padding: 1.5em;
+    margin: 3em;
+}
+blockquote cite:before {
+    content: "- ";
+}

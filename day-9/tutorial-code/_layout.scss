@@ -1,0 +1,55 @@
+/* Layout specific */
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    .boxed-layout & {
+        // Variable defined inside a selector
+        $border-color: #eaeaea !global;
+
+        background-color: $white;
+        padding: $baseline * 2;
+        border: 1px solid $border-color;
+        border-width: 0 1px;
+    }
+
+    > header {
+        h1 {
+            font-size: 4em;
+            font-weight: 800;
+        }
+    }
+}
+
+nav {
+    padding: $baseline * 2 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+
+            a {
+                display: inline-block;
+
+                color: $text-color;
+                padding: 1em;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $border-color;
+                }
+            }
+
+            &:after {
+                content: "";
+                border: 1px dotted #ccc;
+                width: 1px;
+                height: 100%;
+            }
+        }
+    }
+}

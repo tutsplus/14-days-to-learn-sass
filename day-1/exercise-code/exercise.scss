@@ -1,0 +1,40 @@
+// Day 1 Exercise
+//
+// The following code uses the SCSS syntax.
+//
+// Your assignment is to translate it into code that uses the Sass syntax.
+// On at least two properties, use the alternative property syntax.
+//
+// In the end, compare it with the result from the /exercise-answer folder.
+// Good luck!
+
+* { box-sizing: border-box; }
+
+/* Body styles */
+body {
+    font-family: "Helvetica", Arial, sans-serif;
+    color: #cccccc;
+}
+
+    body p {
+        color: #888;
+        line-height: 1.5;
+    }
+
+.container { clear: both; }
+
+main {
+    float: left;
+    width: 75%;
+}
+
+#sidebar {
+    float: right;
+    margin-left: 5%;
+    width: 20%;
+}
+
+/* Footer styles.
+ *
+ * These should be placed last. */
+footer { margin-top: 2em; padding: 1em; }

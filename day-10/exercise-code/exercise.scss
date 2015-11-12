@@ -1,0 +1,73 @@
+/* Day 10 Exercise
+ *
+ * This is a .css file.
+ *
+ * Your assignment is to write the corresponding .scss file while respecting a few rules.
+ * 1. You need to use variables wherever you see fit.
+ * 2. You need to use at least two maps.
+ * 3. You need to nest @media rules at least once.
+ * 4. You must use the * (multiplication) operator at least twice.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font: 1em/1.5 "Helvetica", Arial, sans-serif;
+}
+
+    body.boxed-layout {
+        background-color: #eaeaea;
+    }
+
+@media all and (max-width: 480px) {
+    body {
+        font-size: 1.4em;
+        background-color: #fff;
+    }
+}
+
+@media all and (min-width: 768px) and (max-width: 1280px) {
+    body {
+        font-size: 1.2em;
+    }
+}
+
+p {
+    margin-bottom: 1.5em;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+@media all and (min-width: 768px) {
+    .boxed-layout .container {
+        background-color: #fff;
+        border: 1px solid #d1d1d1;
+        border-width: 0 1px;
+        padding: 3em;
+    }
+}
+
+.col-half {
+    float: left;
+    width: 45%;
+    margin: 0 2.5%;
+    padding: 3em;
+}
+
+@media all and (max-width: 480px) {
+    .col-half {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}

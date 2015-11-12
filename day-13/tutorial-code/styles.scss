@@ -1,0 +1,55 @@
+/* Day 13 - @each and @while directives */
+
+@each $section in featured, about, contact {
+    ##{$section}-section {
+        background-image: url('img/bg-#{$section}.jpg');
+    }
+}
+
+// @each $section, $color in (featured, red), (about, green) {
+//     .section-#{$section} {
+//         background-color: $color;
+//     }
+// }
+
+$section-colors: (
+    featured: red,
+    about: green
+);
+
+@each $section, $color in $section-colors {
+    .section-#{$section} {
+        background-color: $color;
+    }
+}
+
+$headings: (
+    h1: 4em,
+    h2: 2.8em,
+    h3: 2em,
+    h4: 1.2em
+);
+
+@each $element, $size in $headings {
+    #{$element} {
+        font-size: $size;
+    }
+}
+
+$i: 1;
+
+@while $i <= 10 {
+    .item-#{$i} {
+        top: 5em * $i;
+        $i: $i + 5;
+    }
+}
+
+$j: 1;
+@while $j <= 4 {
+    h#{$j} {
+        font-size: map-get($headings, h#{$j});
+    }
+
+    $j: $j + 1;
+}

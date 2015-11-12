@@ -1,0 +1,25 @@
+/* Day 6 Exercise Answer */
+
+$theme-sans: (
+    family: (Arial, sans-serif),
+    size: 1.125em,
+    line-height: 1.5
+);
+
+$theme-serif: (
+    family: (Georgia, serif),
+    size: 1.5em,
+    line-height: 1.4
+);
+
+body {
+    &.theme-sans {
+        // Interpolation also works with SassScript functions
+        font: #{map_get($theme-sans, size)}/#{map_get($theme-sans, line-height)} map_get($theme-sans, family);
+    }
+
+    &.theme-serif {
+        // Interpolation also works with SassScript functions
+        font: #{map_get($theme-serif, size)}/#{map_get($theme-serif, line-height)} map_get($theme-serif, family);
+    }
+}

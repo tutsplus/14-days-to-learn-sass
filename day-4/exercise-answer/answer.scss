@@ -1,0 +1,68 @@
+/* Day 4 Exercise Answer */
+
+// Variables
+$base-font-size: 1em;
+$base-line-height: 1.5;
+$baseline: $base-font-size * $base-line-height;
+
+$body-typeface: Arial, sans-serif;
+$special-typeface: serif;
+
+$accent-color: #CD746A;
+$dark-text-color: #333;
+
+$fixed-layout-width: 960px;
+$fluid-layout-width: 85%;
+
+body {
+    font-family: $body-typeface;
+    font-size: $base-font-size;
+    line-height: $base-line-height;
+}
+
+p {
+    margin-bottom: $baseline;
+
+    a {
+        text-decoration: none;
+        color: $accent-color;
+
+        &:hover {
+            color: #fff;
+            background-color: $dark-text-color;
+        }
+    }
+}
+
+blockquote {
+    font-family: $special-typeface;
+    font-size: 150%;
+    font-style: italic;
+    padding: $baseline * 2 $baseline;
+    margin: $baseline * 2;
+
+    cite {
+        a {
+            color: $dark-text-color;
+
+            &:hover {
+                color: $accent-color;
+                text-decoration: underline;
+                text-transform: uppercase;
+            }
+        }
+
+        &:before {
+            content: "- ";
+        }
+    }
+}
+
+.container {
+    width: $fixed-layout-width;
+    margin: 0 auto;
+
+    .fluid-layout & {
+        width: $fluid-layout-width;
+    }
+}

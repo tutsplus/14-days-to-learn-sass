@@ -1,0 +1,27 @@
+/* Day 14 Exercise Answer */
+
+@mixin gradient($from, $to) {
+    background-color: $from;
+    background-image: -webkit-linear-gradient(top, $from, $to);
+    background-image: linear-gradient(to bottom, $from, $to);
+}
+
+@mixin rotate($amount) {
+    -webkit-transform: rotate($amount);
+    -ms-transform: rotate($amount);
+    transform: rotate($amount);
+}
+
+@mixin 3dtransforms($perspective, $rotation, $style) {
+    -webkit-perspective: $perspective;
+    -ms-perspective: $perspective;
+    perspective: $perspective;
+
+    -webkit-transform: rotateY($rotation);
+    -ms-transform: rotateY($rotation);
+    transform: rotateY($rotation);
+
+    -webkit-transform-style: $style;
+    -ms-transform-style: $style;
+    transform-style: $style;
+}

@@ -1,0 +1,13 @@
+/* Day 9 - Partials */
+
+// Variables
+$text-color: #333;
+$text-font-family: Helvetica, Arial, sans-serif;
+$white: #ffffff;
+$baseline: 1.5em;
+$line-height: 1.5;
+$base-font-size: 1.125em;
+
+$cite-before: "Author: ";
+
+@import "general/general", "layout";

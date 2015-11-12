@@ -1,0 +1,49 @@
+/* Day 8 Exercise
+ *
+ * This is an .scss file.
+ *
+ * Your assignment is to answer the questions below and typing your answer in the
+ * designated commented area.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+/*** QUESTION 1 ***/
+/*** The following two imports have the same result. True or false? ***/
+@import "typography.scss";
+@import "typography";
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 2 ***/
+/*** Will the following Sass @import create a CSS @import? Answer with Yes or No. ***/
+@import "typography" screen;
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 3 ***/
+/*** Is the following @import correct? Answer with Yes or No. ***/
+@import "reset.sass", "settings/variables";
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 4 ***/
+/*** This statement will import the contents of "reset.scss" correctly. True of false? ***/
+@import url("reset.scss");
+
+/*** Type your answer here ***/
+
+
+
+/*** QUESTION 5 ***/
+/*** The following statements will generate two separate CSS files. True or false? ***/
+@import "reset.scss";
+@import "typography";
+
+/*** Type your answer here ***/

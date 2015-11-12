@@ -1,0 +1,30 @@
+/* Day 13 Exercise Answer */
+
+/* @each directive */
+@each
+$network, $color, $text in
+(twitter, #58ABEC, "Follow us on Twitter"),
+(facebook, #3E578D, "Connect with us on Facebook"),
+(email, #96CC6B, "Email us") {
+    #social-#{$network} {
+        background: url("images/icon-social-#{$network}.png");
+        color: $color;
+
+        &:before {
+            content: $text;
+        }
+    }
+}
+
+
+
+/* @while directive */
+$counter: 10;
+
+@while $counter > 0 {
+    .element-#{$counter} {
+        height: 2.5em * $counter;
+    }
+
+    $counter: $counter - 2;
+}

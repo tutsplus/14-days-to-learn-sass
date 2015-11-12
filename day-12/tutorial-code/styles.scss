@@ -1,0 +1,58 @@
+/* Day 12 - @if and @for directives */
+
+// serif or sans-serif
+$type: sans-serif;
+
+body {
+    @if $type == serif {
+        font-family: Georgia, serif;
+    } @else if $type == sans-serif {
+        font-family: Arial, sans-serif;
+    }
+}
+
+// cold, warm, neutral
+$theme: neutral;
+
+.button {
+    @if $theme == warm {
+        background-color: orange;
+    } @else if $theme == cold {
+        background-color: blue;
+    } @else {
+        background-color: gray;
+    }
+}
+
+
+// @for $i from 1 to 3 {
+@for $i from 1 through 3 {
+    .cell {
+        background: blue;
+    }
+}
+
+$comment-count: 10;
+
+// @for $i from 1 through $comment-count {
+@for $i from $comment-count through 1 {
+    #comment-#{$i}:before {
+        content: "#{$i}";
+    }
+}
+
+.bar {
+    width: 2em;
+    display: inline-block;
+    background: #ccc;
+    margin-right: 1px;
+    float: left;
+}
+
+@for $j from 1 through 4 {
+    #bar-#{$j} {
+        @extend .bar;
+
+        height: 1em * $j;
+    }
+}

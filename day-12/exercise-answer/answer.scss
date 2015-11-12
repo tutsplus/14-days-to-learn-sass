@@ -1,0 +1,54 @@
+/* Day 12 Exercise Answer */
+
+// $palette: light;
+$palette: dark;
+
+$palette-light: (
+    1: #cccccc,
+    2: #eaeaea,
+    3: #F1F4F7,
+    4: #FFFAF7
+);
+
+$palette-dark: (
+    1: #2B2B2B,
+    2: #F5F5F5,
+    3: #E5E5E5,
+    4: #DDB34E
+);
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	font-size: 20px;
+}
+
+.palette {
+    position: relative;
+    width: 17em;
+    height: 5em;
+    border: 1px solid #333;
+}
+
+.palette-item {
+    width: 3em;
+    height: 3em;
+    display: inline-block;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+}
+
+@for $i from 1 through 4 {
+    #palette-item-#{$i} {
+        @if $palette == light {
+            background: map-get($palette-light, $i);
+        } @else if $palette == dark {
+            background: map-get($palette-dark, $i);
+        }
+
+        left: (4em * $i) - 3em;
+    }
+}

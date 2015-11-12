@@ -1,0 +1,85 @@
+/* Day 10 Exercise Answer */
+
+// Breakpoint values
+$breakpoints: (
+    mobile: 480px,
+    tablet: 768px,
+    desktop: 1280px
+);
+
+// Font size increments
+$font-increments: (
+    mobile: 1.4,
+    tablet: 1.2
+);
+
+// Variables
+$default-bg: #fff;
+$boxed-body-bg: #eaeaea;
+$boxed-container-bg: #fff;
+$boxed-container-border: #d1d1d1;
+
+$font-family: "Helvetica", Arial, sans-serif;
+$base-font-size: 1em;
+$line-height: 1.5;
+$baseline: $base-font-size * $line-height;
+
+$content-width: 90%;
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+
+    font: #{$base-font-size}/#{$line-height} $font-family;
+
+    &.boxed-layout {
+        background-color: $boxed-body-bg;
+    }
+
+    @media all and (max-width: map-get($breakpoints, mobile)) {
+        font-size: $base-font-size * map-get($font-increments, mobile);
+        background-color: $default-bg;
+    }
+
+    @media all and (min-width: map-get($breakpoints, tablet)) {
+        @media (max-width: map-get($breakpoints, desktop)) {
+            font-size: $base-font-size * map-get($font-increments, tablet);
+        }
+    }
+}
+
+p {
+    margin-bottom: $baseline;
+}
+
+.container {
+    width: $content-width;
+    margin: 0 auto;
+    overflow: hidden;
+
+    .boxed-layout & {
+        @media all and (min-width: map-get($breakpoints, tablet)) {
+            background-color: $boxed-container-bg;
+            border: 1px solid $boxed-container-border;
+            border-width: 0 1px;
+            padding: $baseline * 2;
+        }
+    }
+}
+
+.col-half {
+    float: left;
+    width: 45%;
+    margin: 0 2.5%;
+    padding: $baseline * 2;
+
+    @media all and (max-width: map-get($breakpoints, mobile)) {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+}

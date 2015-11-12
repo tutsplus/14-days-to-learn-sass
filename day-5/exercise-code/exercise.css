@@ -1,0 +1,31 @@
+/* Day 5 Exercise
+ *
+ * This is a CSS file.
+ *
+ * Your assignment is to create the .scss file that compiles into this. The requirement
+ * is that the button class names, color values, font family, size and line height are all
+ * taken from variables. For this, you can use any kind of knowledge you've gained so far.
+ *
+ * Also, you should use as few Sass code lines as possible (around 22 without blank lines).
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+body {
+    font: 1em/1.5 Helvetica, Arial, sans-serif;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1em;
+}
+
+.btn-primary {
+    background-color: #89C3AB;
+    color: #fff;
+}
+
+.btn-default {
+    background-color: #686868;
+    color: #fff;
+}

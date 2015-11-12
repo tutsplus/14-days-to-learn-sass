@@ -1,0 +1,31 @@
+/* Day 5 Exercise Answer */
+
+// Variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size: 1em;
+$base-line-height: 1.5;
+
+$color-1: #89C3AB;
+$color-2: #686868;
+
+$btn-name-1: "primary";
+$btn-name-2: "default";
+
+body {
+    font: #{$base-font-size}/#{$base-line-height} $base-font-family;
+}
+
+.btn {
+    display: inline-block;
+    padding: .5em 1em;
+
+    &-#{$btn-name-1} {
+        background-color: $color-1;
+        color: #fff;
+    }
+
+    &-#{$btn-name-2} {
+        background-color: $color-2;
+        color: #fff;
+    }
+}

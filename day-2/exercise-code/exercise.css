@@ -1,0 +1,52 @@
+/* Day 2 Exercise
+ *
+ * This is a CSS file compiled from an Scss file.
+ *
+ * Your assignment is to create the original .scss file using
+ * nesting and the parent selector.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+}
+
+p { margin-bottom: 1.5em; }
+
+    p a {
+        text-decoration: none;
+        color: #CD746A;
+    }
+        p a:hover {
+            color: #fff;
+            background-color: #333;
+        }
+
+blockquote {
+    font-style: italic;
+}
+
+    blockquote cite a {
+        color: #333;
+    }
+
+        blockquote cite a:hover {
+            color: #CD746A;
+            text-decoration: underline;
+        }
+
+    blockquote cite:before {
+        content: "- ";
+    }
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+    .fluid-layout .container {
+        width: 85%;
+    }

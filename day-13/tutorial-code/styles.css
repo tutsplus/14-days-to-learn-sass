@@ -1,0 +1,45 @@
+/* Day 13 - @each and @while directives */
+#featured-section {
+  background-image: url("img/bg-featured.jpg"); }
+
+#about-section {
+  background-image: url("img/bg-about.jpg"); }
+
+#contact-section {
+  background-image: url("img/bg-contact.jpg"); }
+
+.section-featured {
+  background-color: red; }
+
+.section-about {
+  background-color: green; }
+
+h1 {
+  font-size: 4em; }
+
+h2 {
+  font-size: 2.8em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  font-size: 1.2em; }
+
+.item-1 {
+  top: 5em; }
+
+.item-6 {
+  top: 30em; }
+
+h1 {
+  font-size: 4em; }
+
+h2 {
+  font-size: 2.8em; }
+
+h3 {
+  font-size: 2em; }
+
+h4 {
+  font-size: 1.2em; }

@@ -1,0 +1,38 @@
+/* Day 7 Exercise Answer */
+
+$settings: (
+    main-font: Helvetica,
+    fallback-font: (Arial, sans-serif),
+    font-size: 1em,
+    line-height: 1.5,
+    text-color: #999,
+    cite-before: "- ",
+    small-text-multiplier: .75,
+    large-text-multiplier: 2
+);
+
+$baseline: map-get($settings, font-size) * map-get($settings, line-height);
+
+body {
+    font: #{map-get($settings, font-size)}/#{map-get($settings, line-height)} map-get($settings, main-font) + ", " + map-get($settings, fallback-font);
+    color: map-get($settings, text-color);
+}
+
+.large-text {
+    font-size: 100% * map-get($settings, large-text-multiplier);
+}
+
+.small-text {
+    font-size: 100% * map-get($settings, small-text-multiplier);
+}
+
+blockquote {
+    padding: $baseline;
+    margin: $baseline + $baseline;
+
+    cite {
+        &:before {
+            content: map-get($settings, cite-before);
+        }
+    }
+}

@@ -1,0 +1,34 @@
+/* Day 14 Exercise
+ *
+ * This is a .css file.
+ *
+ * Your assignment is to write mixins for the following CSS3 properties.
+ *
+ * In the end, compare it with the result from the /exercise-answer folder.
+ * Good luck! */
+
+.gradient {
+    background-color: #333333;
+    background-image: -webkit-linear-gradient(top, #333333, #888888);
+    background-image: linear-gradient(to bottom, #333333, #888888);
+}
+
+.rotate {
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.3dtransforms {
+    -webkit-perspective: 100px;
+    -ms-perspective: 100px;
+    perspective: 100px;
+
+    -webkit-transform: rotateY(90deg);
+    -ms-transform: rotateY(90deg);
+    transform: rotateY(90deg);
+
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}

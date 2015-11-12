@@ -1,0 +1,156 @@
+/* Day 10 - @media directive */
+
+// Variables
+$text-color: #333;
+$text-font-family: Helvetica, Arial, sans-serif;
+$white: #ffffff;
+$baseline: 1.5em;
+$line-height: 1.5;
+$base-font-size: 1.125em;
+
+$cite-before: "Author: ";
+
+$tablet-breakpoint: "screen and (max-width: 768px)";
+
+/* General styles */
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    padding: 0;
+    font: #{$base-font-size}/#{$line-height} $text-font-family;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    color: $text-color;
+
+    &.boxed-layout {
+        background-color: #F9F9F9;
+    }
+}
+
+p {
+    margin-bottom: 1.3em;
+    color: #666;
+
+    a {
+        color: #589ED3;
+    }
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+h1,
+h2,
+h3,
+h4 {
+    margin: 1.414em 0 .5em;
+    font-weight: inherit;
+    line-height: 1.2;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 3.157em;
+}
+
+h2 { font-size: 2.369em; }
+
+h3 { font-size: 1.777em; }
+
+h4 { font-size: 1.333em; }
+
+small { font-size: .75em; }
+
+blockquote {
+    font-size: 150%;
+    font-style: italic;
+
+    cite {
+        display: block;
+        font-size: 1rem;
+        font-style: normal;
+
+        &:before {
+            content: "- #{$cite-before}";
+            // content: "- " + $cite-before; -- also works
+        }
+    }
+}
+
+/* Layout specific */
+.container {
+    width: 90%;
+    margin: 0 auto;
+
+    .boxed-layout & {
+        // Variable defined inside a selector
+        $border-color: #eaeaea !global;
+
+        background-color: $white;
+        padding: $baseline * 2;
+        border: 1px solid $border-color;
+        border-width: 0 1px;
+    }
+
+    > header {
+        h1 {
+            font-size: 4em;
+            font-weight: 800;
+        }
+    }
+}
+
+nav {
+    padding: $baseline * 2 0;
+
+    ul {
+        list-style: none;
+        padding: 0;
+        overflow: hidden;
+
+        li {
+            float: left;
+
+            a {
+                display: inline-block;
+
+                color: $text-color;
+                padding: 1em;
+
+                &:hover {
+                    text-decoration: none;
+                    background-color: $border-color;
+                }
+            }
+
+            &:after {
+                content: "";
+                border: 1px dotted #ccc;
+                width: 1px;
+                height: 100%;
+            }
+
+            @media #{$tablet-breakpoint} {
+                float: none;
+
+                a {
+                    display: block;
+                }
+
+                &:after {
+                    border: none;
+                }
+
+                @media (orientation: portrait) {
+                    border-bottom: 1px;
+                }
+            }
+        }
+    }
+}

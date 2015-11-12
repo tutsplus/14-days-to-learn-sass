@@ -1,0 +1,61 @@
+/* Day 3 Exercise Answer */
+
+body {
+     font: {
+         family: Arial, sans-serif;
+         size: 16px;
+         weight: normal;
+     }
+
+     line-height: 1.45;
+}
+
+p {
+    margin-bottom: 1.5em;
+
+    a {
+        text-decoration: none;
+        color: #CD746A;
+
+        &:hover {
+            color: #fff;
+            background-color: #333;
+        }
+    }
+}
+
+blockquote {
+    font: {
+        family: serif;
+        size: 150%;
+        style: italic;
+    }
+
+    cite {
+        a {
+            color: #333;
+
+            &:hover {
+                color: #CD746A;
+
+                text: {
+                    decoration: underline;
+                    transform: uppercase;
+                }
+            }
+        }
+
+        &:before {
+            content: "- ";
+        }
+    }
+}
+
+.container {
+    width: 960px;
+    margin: 0 auto;
+
+    .fluid-layout & {
+        width: 85%;
+    }
+}

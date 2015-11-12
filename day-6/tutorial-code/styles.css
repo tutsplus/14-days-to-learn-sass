@@ -1,0 +1,38 @@
+/* Day 6 - Data types */
+body {
+  margin: 100px;
+  line-height: 1.5;
+  font-weight: 800;
+  padding: 1%; }
+
+.container {
+  font-family: "Helvetica", Arial, sans-serif;
+  font-weight: bold; }
+  .container:before {
+    content: "This is a pseudo-element"; }
+
+.parent-element {
+  padding: 1em; }
+
+.btn {
+  color: #cccccc;
+  background-color: white;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-top-color: #88c3ab;
+  border-bottom-color: blue; }
+
+.sidebar {
+  padding: 3em;
+  margin: 1em 2em 3em 4em;
+  font-family: Helvetica, Arial, sans-serif;
+  box-shadow: 0 0 3px #999, 10px 10px 20px #555; }
+
+body.serif {
+  font: 400 15px/1.5 Georgia, serif; }
+
+footer {
+  background-color: #89C3AB;
+  border-color: blue;
+  margin: 30px;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif; }
